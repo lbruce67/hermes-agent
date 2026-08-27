@@ -1,9 +1,9 @@
 """Guard GitHub Actions checkout pins and workflow trigger safety.
 
-actions/checkout v7.0.0 (commit 9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0) is
+actions/checkout v7.0.1 (commit 3d3c42e5aac5ba805825da76410c181273ba90b1) is
 pinned by full SHA across all workflows per CONTRIBUTING.md supply-chain policy.
-The SHA matches the official v7.0.0 release tag:
-https://github.com/actions/checkout/releases/tag/v7.0.0
+The SHA matches the official v7.0.1 release tag:
+https://github.com/actions/checkout/releases/tag/v7.0.1
 
 v7 breaking changes (ESM module, fork-PR blocking on pull_request_target /
 workflow_run) do not affect this repo: no workflow uses those triggers, and all
@@ -20,9 +20,9 @@ import pytest
 REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent
 WORKFLOWS_DIR = REPO_ROOT / ".github" / "workflows"
 
-# Official actions/checkout v7.0.0 release commit (verified against the tag above).
-CHECKOUT_V7_SHA = "9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0"
-CHECKOUT_V7_TAG = "v7.0.0"
+# Official actions/checkout v7.0.1 release commit (verified against the tag above).
+CHECKOUT_V7_SHA = "3d3c42e5aac5ba805825da76410c181273ba90b1"
+CHECKOUT_V7_TAG = "v7.0.1"
 
 # Full SHA (40 hex) + inline version comment — CONTRIBUTING.md required format.
 CHECKOUT_PIN_RE = re.compile(
